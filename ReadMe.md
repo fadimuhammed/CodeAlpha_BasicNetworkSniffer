@@ -35,39 +35,39 @@ pip install scapy
 Basic capture (default interface, runs until Ctrl+C):
 
 ```bash
-sudo python3 packet_sniffer.py
+sudo python3 network_sniffer.py
 ```
 
 Capture on a specific interface:
 
 ```bash
-sudo python3 packet_sniffer.py -i eth0
+sudo python3 network_sniffer.py -i eth0
 ```
 
 Capture a fixed number of packets:
 
 ```bash
-sudo python3 packet_sniffer.py -c 50
+sudo python3 network_sniffer.py -c 50
 ```
 
 Apply a filter (BPF syntax) to capture only certain traffic:
 
 ```bash
-sudo python3 packet_sniffer.py -f "tcp port 80"
-sudo python3 packet_sniffer.py -f "udp port 53"
-sudo python3 packet_sniffer.py -f "icmp"
+sudo python3 network_sniffer.py -f "tcp port 80"
+sudo python3 network_sniffer.py -f "udp port 53"
+sudo python3 network_sniffer.py -f "icmp"
 ```
 
 Suppress payload output (headers only):
 
 ```bash
-sudo python3 packet_sniffer.py --no-payload
+sudo python3 network_sniffer.py --no-payload
 ```
 
 Combine options:
 
 ```bash
-sudo python3 packet_sniffer.py -i eth0 -c 100 -f "tcp port 443"
+sudo python3 network_sniffer.py -i eth0 -c 100 -f "tcp port 443"
 ```
 
 ### All options
